@@ -49,9 +49,22 @@ typedef enum {
 typedef struct {
 	real32_t valor1;
 	real32_t valor2;
+	uint16_t anio;	 /* 1 to 4095 */
+	uint8_t  mes; /* 1 to 12   */
+	uint8_t  dia;	 /* 1 to 31   */
+	uint8_t  hora;	 /* 0 to 23   */
+	uint8_t  min;	 /* 0 to 59   */
+	uint8_t  seg;
 	DataSource_t fuente;
 
 } Data_t;
+
+rtc_t rtc;
+
+
+
+// Completar estructura RTC
+
 
 Data_t xStructsToSend[2];
 

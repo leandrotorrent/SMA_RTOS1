@@ -47,6 +47,17 @@ int main( void )
 	uartConfig( UART_USB, 115200 ); // Inicializar periferico UART_USB
 	i2cInit(OLED_I2C_PORT, OLED_I2C_RATE);
 
+	rtc.year = 2019;
+	rtc.month = 9;
+	rtc.mday = 4;
+	rtc.wday = 3;
+	rtc.hour = 16;
+	rtc.min = 41;
+	rtc.sec= 0;
+	rtcInit();
+	rtcWrite( &rtc );
+
+
 	//oledInit();
 
 	if( xQueueDatos != NULL ) {
